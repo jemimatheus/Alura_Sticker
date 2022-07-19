@@ -25,5 +25,14 @@ public class App {
         var parser = new JsonParser();
         List<Map<String,String>> listaDeFilmes = parser.parse(body);
       
+        System.out.println(listaDeFilmes.size());
+
+        //Exibir os dados extraidos
+
+        for (Map<String,String> filme : listaDeFilmes) {
+            System.out.println(filme.get("title"));
+            System.out.println(filme.get("image"));
+            System.out.println(filme.get("imDbRating"));
+        }
     }
 }
